@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>ventoy教程</title>
+    <link href="/2021/09/11/ventoy%E6%95%99%E7%A8%8B/"/>
+    <url>/2021/09/11/ventoy%E6%95%99%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<p><strong>前排提醒</strong>：<br>多动手搜索，多尝试！<br>- <a href="https://www.ventoy.net/cn/doc_news.html" title="ventoy文档">ventoy文档</a><br>- <a href="https://www.baidu.com/" title="百度">百度</a><br><strong>所需材料</strong>：<br>- 一双灵巧的手<br>- 一个能读字的大脑<br>- 一个U盘 </p><span id="more"></span><h1 id="教程正式开始"><a href="#教程正式开始" class="headerlink" title="教程正式开始"></a>教程正式开始</h1><h2 id="1-下载ventoy并将ventoy安装到U盘中，这一步大多人都会吧"><a href="#1-下载ventoy并将ventoy安装到U盘中，这一步大多人都会吧" class="headerlink" title="1. 下载ventoy并将ventoy安装到U盘中，这一步大多人都会吧"></a>1. 下载ventoy并将ventoy安装到U盘中，这一步大多人都会吧</h2><p> <img src="https://bu.dusays.com/2021/08/30/e3dc893f767cf.png" alt="ventoy" title="ventoy"> 安装完成后会出现两个盘。 <a href="http://coolarec.one/wp-content/uploads/2021/08/wp_editor_md_d5a9998f84440ff001519f51d65e3e58.jpg"></a><br> <strong>请注意，我们的所有操作都是在2盘中进行的</strong> 至此，安装结束，盘中没有任何文件，如果仅仅只是想当做个启动盘用，可以直接传进镜像即可启动<br> 附一张官方的截图<br><a href="https://www.ventoy.net/static/img/screen/screen_bios2.png" title="截图"><img src="https://www.ventoy.net/static/img/screen/screen_bios2.png" alt="截图" title="截图"></a> </p><p>附firpe和微pe获取iso方式 <img src="https://bu.dusays.com/2021/08/30/5179c27657b22.png"> <img src="https://bu.dusays.com/2021/08/30/f681a55cf76e8.png"> </p><h2 id="2-废话结束，进入正题，美化-想看简洁版教程直接-点我"><a href="#2-废话结束，进入正题，美化-想看简洁版教程直接-点我" class="headerlink" title="2. 废话结束，进入正题，美化 想看简洁版教程直接 点我"></a>2. 废话结束，进入正题，美化 想看简洁版教程直接 <a href="https://www.ventoy.net/cn/plugin_theme.html" title="点我">点我</a></h2><ul><li>创建<code>ventoy</code>文件夹，并创建<code>ventoy.json</code>文件 </li><li>下载自己中意的主题文件并传到一个自己能找到到的地方 <a href="https://www.gnome-look.org/browse?cat=109&ord=latest" title="下载地址">下载地址</a> </li><li>按照官方文档在<code>ventoy.json</code>中写入 </li></ul><blockquote><p>{ “theme”: { “file”: “/theme/monterey/theme.txt”, } } </p></blockquote><p>其中<code>/theme/monterey/theme.txt</code>是主题theme.txt的位置上，<code>/</code>表示U盘根目录<br>若填入多个file属性，则会随机开启一个主题 <code>&quot;file&quot;: [ &quot;/ventoy/theme1/theme.txt&quot;, &quot;/ventoy/theme2/theme.txt&quot;, &quot;/ventoy/theme3/theme.txt&quot;, &quot;/ventoy/theme4/theme.txt&quot; ]</code><br>如果想自定义美化，可根据该theme.txt编辑或替换文件 若过懒的话，可以下载我编辑好的文件，解压并传入U盘根目录 链接见文末<br>## 3. 数据持久化 官方文档：<a href="https://www.ventoy.net/cn/plugin_persistence.html" title="点我">点我</a><br>先上代码<br><code> &quot;persistence&quot;: [ &#123; &#123; &quot;image&quot;: &quot;/ISO/ubuntu-20.04-desktop-amd64.iso&quot;, &quot;backend&quot;: [ &quot;/persistence/ubuntu_20.04_1.dat&quot;, &quot;/persistence/ubuntu_20.04_2.dat&quot;, &quot;/persistence/ubuntu_20.04_3.dat&quot; ], &quot;autosel&quot;: 2 &#125; &#125;</code><br>将这串代码复制进json文件即可（需要自己修改）<br><code>image</code>填写镜像位置，<code>backend</code>填写对应的文件系统<br>至于<code>autosel</code>标签，直接上官方文档吧</p><blockquote><p>可选的，可以不设置。如果设置了之后，在启动前就不会再弹出提示菜单，而是自动选择提示菜单中的对应选项。<br>0: 不使用持久化数据文件<br>1: 使用第1个持久化数据文件<br>2: 使用第2个持久化数据文件 ……</p></blockquote><p><img src="https://bu.dusays.com/2021/08/30/fcbd2591c87d6.png"><br>对应文件系统下载地址 </p><ul><li><a href="https://github.com/ventoy/backend/releases" title="github">github</a>  </li><li><a href="https://cowtransfer.com/s/b4e53d5301964e" title="奶牛快传">奶牛快传</a> </li><li><a href="https://wwa.lanzoui.com/iFFe6tcs1hc" title="蓝奏云">蓝奏云</a><br>最后是主题文件下载地址 </li><li><a href="https://wwa.lanzoui.com/iqV0Etcshkb" title="蓝奏云">蓝奏云</a>   </li></ul><p>欢迎大家评论</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>ventoy,U盘</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
